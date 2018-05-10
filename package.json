@@ -1,0 +1,22 @@
+{
+  "name": "vue-calc",
+  "version": "1.0.0",
+  "description": "simple calculator for wages",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danielriodejaneiro/cautious-octo-happiness.git"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "Daniel Santos <daniel@brasileiro.ca>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danielriodejaneiro/cautious-octo-happiness/issues"
+  },
+  "homepage": "https://github.com/danielriodejaneiro/cautious-octo-happiness#readme"
+}

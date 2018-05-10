@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="app">
+    <h1>The simplest calc in town... {{product}}</h1>
+</main>
+<script src="https://unpkg.com/vue"></script>
+<script>
+    const app = new Vue({
+        el: '#app',
+        data: {
+            product: 'Boots'
+        }
+    })
+</script>
+</body>
+</html>
