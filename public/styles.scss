@@ -8,4 +8,23 @@ body {
   box-sizing: border-box;
   //typo
   font-size: 18px;
+
+  .items {
+    cursor: pointer;
+    padding-left: 1rem;
+    font-weight: bold;
+    &:before {
+      content: '*';
+    }
+    &:first-of-type:before, &:first-of-type:after {
+      content: '.';
+      color: red;
+    }
+  }
+  .items:hover:nth-of-type(odd) {
+    color: pink;
+  }
+  .items:hover:nth-of-type(even) {
+    color: dodgerblue;
+  }
 }

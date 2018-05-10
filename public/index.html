@@ -20,8 +20,9 @@
 <body>
 <main id="app">
     <article id="firebase">
-        <h1>The simplest calc in town...</h1>
-        <p id="load"></p>
+        <h2 id="load"></h2>
+        <p id="iteration">The simplest calc in town has<span class="items">...</span><br>
+        </p>
     </article>
 </main>
 
@@ -32,7 +33,24 @@
 
         firebase.database().ref('/ontario').on('value', snapshot => {
             const result = snapshot.val();
-            console.log(result);
+            // console.log('1', typeof result);
+            // console.log('2', result);
+            // let temp = JSON.stringify(result);
+            // console.log('3', temp);
+            // temp = JSON.parse(temp);
+            // console.log('4', temp);
+
+            /*KEEP IN MIND: use IN for objects and OF for iterables*/
+            for (let i in result) {
+                document.getElementById('iteration').innerHTML += `<span class="items">${i}</span><br>`;
+                // console.log(i);
+            }
+
+            /*start foreach*/
+            // result.foreach((e, i, a) => {
+            //     console.log(i, ':', e);
+            // });
+            /*end of foreach*/
         });
 
         // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
@@ -41,11 +59,13 @@
             let app = firebase.app();
             let features = ['database'].filter(feature => typeof app[feature] === 'function');
             document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+
+
+
         } catch (e) {
             console.error(e);
             document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
         }
     });
 </script>
-</body>
-</html>
+</body

@@ -5,5 +5,18 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-size: 18px; }
+  body .items {
+    cursor: pointer;
+    padding-left: 1rem;
+    font-weight: bold; }
+    body .items:before {
+      content: '*'; }
+    body .items:first-of-type:before, body .items:first-of-type:after {
+      content: '.';
+      color: red; }
+  body .items:hover:nth-of-type(odd) {
+    color: pink; }
+  body .items:hover:nth-of-type(even) {
+    color: dodgerblue; }
 
 /*# sourceMappingURL=styles.css.map */
